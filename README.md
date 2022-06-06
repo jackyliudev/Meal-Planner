@@ -1,4 +1,4 @@
-# Task Manager Site
+# Meal Planner Site
 A responsive website to plan weekly meals
 
 **Link to project:** <a href=#>Under Construction</a>
