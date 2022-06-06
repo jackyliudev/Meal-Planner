@@ -1,5 +1,5 @@
 # Task Manager Site
-A responsive website to manage daily personal tasks
+A responsive website to plan weekly meals
 
 **Link to project:** <a href=#>Under Construction</a>
 
@@ -7,7 +7,7 @@ A responsive website to manage daily personal tasks
 ## How It's Made:
 
 **Tech used:** HTML, CSS, JavaScript
-Started with a basic HTML, CSS List to track and manage personal tasks
+Started with a basic HTML, CSS List to plan meals
 
 
 ## Optimizations
