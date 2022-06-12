@@ -21,11 +21,31 @@
 /* BASE STYLES
 /*******************************************/
 
-body {
-
+table{
+     border:2px solid rgb(200,200,200);
+     font-size: 0.8rem;
+     letter-spacing: 1px;
+     border-collapse: collapse;
 }
 
+td, th{
+     border: 1px solid rgb(190,190,190);
+     height:5rem;
+     width: 5rem;
+}
 
+td{
+     text-align:center;
+}
+
+.days{
+     background-color: #d7d9f2;
+}
+
+.header{
+     font-size: 1rem;
+     background-color:white;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
