@@ -38,8 +38,16 @@ td{
      text-align:center;
 }
 
+td:hover{
+     background-color: grey;
+}
+
 .days{
      background-color: #d7d9f2;
+}
+
+.dragover {
+     background-color: grey;
 }
 
 .header{
