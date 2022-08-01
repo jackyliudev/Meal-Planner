@@ -50,6 +50,10 @@ td:hover{
      background-color: grey;
 }
 
+.selectedmeal {
+     background-color: skyblue;
+}
+
 .header{
      font-size: 1rem;
      background-color:white;
@@ -57,14 +61,25 @@ td:hover{
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+.wrapper{
+     display:flex;
 }
 
-footer {
-
+.col{
+     margin:1em 1em;
 }
 
+#mealform{
+     display:flex;
+     flex-direction: column;
+     border: solid 2px black;
+     padding: 0 0.25em;
+     height: fit-content;
+}
+
+#mealform div{
+     padding:0.5em 0;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
