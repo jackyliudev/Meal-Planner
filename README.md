@@ -6,7 +6,7 @@ A responsive website to plan weekly meals
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, Express, Node, Express-Handlebars
+**Tech used:** HTML, CSS, JavaScript, Express, Node, Express-Handlebars, MongoDB
 Created front end and back end for meal planner site.
 
 ## Optimizations
