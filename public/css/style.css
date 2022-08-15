@@ -1,0 +1,85 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+table{
+     border:2px solid rgb(200,200,200);
+     font-size: 0.8rem;
+     letter-spacing: 1px;
+     border-collapse: collapse;
+}
+
+td, th{
+     border: 1px solid rgb(190,190,190);
+     height:5rem;
+     width: 5rem;
+}
+
+td{
+     text-align:center;
+}
+
+td:hover{
+     background-color: grey;
+}
+
+.days{
+     background-color: #d7d9f2;
+}
+
+.dragover {
+     background-color: grey;
+}
+
+.selectedmeal {
+     background-color: skyblue;
+}
+
+.header{
+     font-size: 1rem;
+     background-color:white;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+.wrapper{
+     display:flex;
+}
+
+.col{
+     margin:1em 1em;
+}
+
+#mealform{
+     display:flex;
+     flex-direction: column;
+     border: solid 2px black;
+     padding: 0 0.25em;
+     height: fit-content;
+}
+
+#mealform div{
+     padding:0.5em 0;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
