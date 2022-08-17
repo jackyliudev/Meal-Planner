@@ -2,10 +2,15 @@ const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const homeroutes = require('./routes/home');
+const homeRoutes = require('./routes/home');
+const authRoutes = require('./routes/auth');
+const connectDB = require('./config/db');
 
 // Load Config
 dotenv.config({path: './config/config.env'})
+
+// Connect to Database
+connectDB();
 
 const app = express();
 
@@ -20,7 +25,8 @@ app.set('view engine', 'hbs')
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.use('/', homeroutes);
+app.use('/', homeRoutes);
+app.use('/login', authRoutes);
 
 const PORT = process.env.PORT || 5000;
 

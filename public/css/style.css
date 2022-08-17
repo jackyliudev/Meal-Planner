@@ -80,6 +80,12 @@ td:hover{
 #mealform div{
      padding:0.5em 0;
 }
+
+.login-container{
+     width: 400px;
+     margin-top: 50px;
+     text-align: center;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
