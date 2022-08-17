@@ -1,17 +1,29 @@
+// Express Library Imports
 const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const passport = require('passport');
+
+// Local Imports
+const passportConfig = require('./config/passport');
+const connectDB = require('./config/db');
+
+// Route Imports
 const homeRoutes = require('./routes/home');
 const authRoutes = require('./routes/auth');
-const connectDB = require('./config/db');
+
 
 // Load Config
 dotenv.config({path: './config/config.env'})
 
+// Passport Config
+passportConfig(passport);
+
 // Connect to Database
 connectDB();
 
+// Create express instance
 const app = express();
 
 // Handlebars
@@ -20,6 +32,10 @@ app.engine('.hbs', exphbs.engine({
     extname:'.hbs'
 }))
 app.set('view engine', 'hbs')
+
+// Passport middleware
+//app.use(passport.initialize());
+//app.use(passport.session());
 
 // Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
