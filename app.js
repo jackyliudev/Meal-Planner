@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const homeroutes = require('./routes/home');
 
 // Load Config
 dotenv.config({path: './config/config.env'})
@@ -19,7 +20,7 @@ app.set('view engine', 'hbs')
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.use('/',require('./routes/index'));
+app.use('/', homeroutes);
 
 const PORT = process.env.PORT || 5000;
 
