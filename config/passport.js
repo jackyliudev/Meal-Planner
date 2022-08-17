@@ -9,7 +9,7 @@ module.exports = function(passport){
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         callbackURL: '/login/google/callback'
     }, async (accessToken, refreshToken, profile, done)=>{
-        console.log(profile)
+        //console.log(profile)
         const newUser = {
             accountID: profile.id,
             email: profile.emails[0].value,
@@ -19,7 +19,6 @@ module.exports = function(passport){
             image: profile.photos[0].value
         }
         try{
-            console.log('new user')
             let user = await User.findOne({accountID: profile.id})
             if(user){
                 console.log('User Found')

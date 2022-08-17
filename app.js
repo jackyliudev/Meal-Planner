@@ -4,6 +4,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const passport = require('passport');
+const session= require('express-session');
+const MongoStore = require('connect-mongo');
 
 // Local Imports
 const passportConfig = require('./config/passport');
@@ -12,7 +14,6 @@ const connectDB = require('./config/db');
 // Route Imports
 const homeRoutes = require('./routes/home');
 const authRoutes = require('./routes/auth');
-
 
 // Load Config
 dotenv.config({path: './config/config.env'})
@@ -33,9 +34,18 @@ app.engine('.hbs', exphbs.engine({
 }))
 app.set('view engine', 'hbs')
 
+// Sessions
+app.use(session({
+    secret: 'tidy cats',
+    resave: false,
+    cookie: {maxAge: 60000}, // 60000 is a minute 60s * 1000ms
+    saveUninitialized: false,
+    store: MongoStore.create({mongoUrl: process.env.MONGO_URI})
+}))
+
 // Passport middleware
-//app.use(passport.initialize());
-//app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
