@@ -22,4 +22,16 @@ function gAuthRedirect(req, res){
     res.redirect('/');
 }
 
-module.exports = {getLogin, loginWithGoogle, gAuthCallBack, gAuthRedirect};
+// Logout
+function getLogout(req, res){
+    req.logout((err)=>{
+        if(err){console.error(err)}
+        res.redirect('/');
+    })
+}
+
+module.exports = {getLogin, 
+                loginWithGoogle, 
+                gAuthCallBack, 
+                gAuthRedirect, 
+                getLogout};

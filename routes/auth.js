@@ -17,4 +17,9 @@ router.get('/google', authController.loginWithGoogle);
 
 router.get('/google/callback', authController.gAuthCallBack, authController.gAuthRedirect);
 
+// @desc    Get Login page
+// @route   GET /login/logout
+
+router.get('/logout', authController.getLogout)
+
 module.exports = router;
