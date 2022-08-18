@@ -38,7 +38,7 @@ app.set('view engine', 'hbs')
 app.use(session({
     secret: 'tidy cats',
     resave: false,
-    cookie: {maxAge: 60000}, // 60000 is a minute 60s * 1000ms
+    cookie: {maxAge: 604800000}, // 604800000 is 7days*24hr*60min*60s*1000ms
     saveUninitialized: false,
     store: MongoStore.create({mongoUrl: process.env.MONGO_URI})
 }))
