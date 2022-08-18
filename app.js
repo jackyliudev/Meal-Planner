@@ -14,6 +14,7 @@ const connectDB = require('./config/db');
 // Route Imports
 const homeRoutes = require('./routes/home');
 const authRoutes = require('./routes/auth');
+const mealRoutes = require('./routes/meal');
 
 // Load Config
 dotenv.config({path: './config/config.env'})
@@ -53,6 +54,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', homeRoutes);
 app.use('/login', authRoutes);
+app.use('/meals', mealRoutes);
 
 const PORT = process.env.PORT || 5000;
 

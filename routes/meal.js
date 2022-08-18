@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const homeController = require('../controllers/home');
+const mealController = require('../controllers/meal');
 
 const authMiddleware = require('../middleware/auth');
 
 // @desc    Login/Landing page
-// @route   GET /
+// @route   GET /meals
 
-router.get('/', authMiddleware.checkAuth,homeController.getIndex)
+router.get('/', authMiddleware.checkAuth, mealController.getIndex)
 
 module.exports = router;

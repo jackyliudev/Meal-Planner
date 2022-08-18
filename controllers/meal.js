@@ -1,6 +1,6 @@
-// Controls home page view
+// Controls meals index view
 function getIndex(req,res){
-    res.render('dashboard', {
+    res.render('mealindex', {
         loginStatus: res.locals.dashVal,
         name: res.locals.name
     })
