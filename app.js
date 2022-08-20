@@ -28,6 +28,11 @@ connectDB();
 // Create express instance
 const app = express();
 
+// Body parser
+// Parse data and creats req.body and such also parse url
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
 // Handlebars
 app.engine('.hbs', exphbs.engine({
     defaultLayout: 'main',
