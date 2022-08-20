@@ -33,8 +33,9 @@
             </div>
             <div class="input-field col s2">
                 <i class="fa-solid fa-hashtag prefix"></i>
-                <input type="text" id="ing1qty" name="Qty1">
+                <input type="number" id="ing1qty" name="Qty1" class="validate">
                 <label for="ing1qty">Qty</label>
+                <span class="helper-text" data-error="Invalid"></span>
             </div>
             <div class="input-field col s2">
                 <i class="fa-solid fa-weight-scale prefix"></i>
@@ -43,16 +44,35 @@
             </div>
 
             <div class="col s1">
-                <i class="fas fa-add btn"></i>
+                <i class="fas fa-trash btn"></i>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s2">
+                <i class="fa-solid fa-basket-shopping prefix"></i>
+                <input type="text" id="ingredient2" name="ingredient2">
+                <label for="ingredient2">Ingredient</label>
+            </div>
+            <div class="input-field col s2">
+                <i class="fa-solid fa-hashtag prefix"></i>
+                <input type="number" id="ing2qty" name="Qty2" class="validate">
+                <label for="ing2qty">Qty</label>
+                <span class="helper-text" data-error="Invalid"></span>
+            </div>
+            <div class="input-field col s2">
+                <i class="fa-solid fa-weight-scale prefix"></i>
+                <input type="text" id="ing2unit" name="Unit2">
+                <label for="ing2unit">Unit</label>
             </div>
 
             <div class="col s1">
                 <i class="fas fa-trash btn"></i>
             </div>
         </div>
-
         <div class="row">
             <input type="submit" value="Save" class="btn">
+            <span class="btn blue">Add Ingredient</span>
             <a href="/" class="btn orange">Cancel</a>
         </div>
     </form>
