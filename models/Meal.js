@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ingredientSchema = new mongoose.Schema({
+const IngredientSchema = new mongoose.Schema({
     name:{
         type: String,
         required: true,
@@ -25,7 +25,7 @@ const MealSchema = new mongoose.Schema({
     },
 
     ingredient: {
-        type: [ingredientSchema],
+        type: [IngredientSchema],
         required: false
     },
 
@@ -49,4 +49,7 @@ const MealSchema = new mongoose.Schema({
     }*/
 })
 
-module.exports = mongoose.model('Meal', MealSchema);
+const MealSchemaExport = mongoose.model('Meal', MealSchema);
+const IngredientSchemaExport = mongoose.model('Ingredient', IngredientSchema);
+
+module.exports = {MealSchemaExport,IngredientSchemaExport};

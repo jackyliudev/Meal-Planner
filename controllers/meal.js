@@ -1,4 +1,5 @@
-const Meal = require('../models/Meal');
+const Meal = require('../models/Meal').MealSchemaExport;
+const ingredient = require('../models/Meal').IngredientSchemaExport;
 
 // Controls meals index view
 function getIndex(req,res){
