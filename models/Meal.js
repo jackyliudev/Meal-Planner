@@ -50,6 +50,5 @@ const MealSchema = new mongoose.Schema({
 })
 
 const MealSchemaExport = mongoose.model('Meal', MealSchema);
-const IngredientSchemaExport = mongoose.model('Ingredient', IngredientSchema);
 
-module.exports = {MealSchemaExport,IngredientSchemaExport};
+module.exports = {MealSchemaExport};
